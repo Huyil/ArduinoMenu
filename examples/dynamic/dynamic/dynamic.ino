@@ -104,7 +104,7 @@ uint8_t test=55;//target var for numerical range field
 
 //edit text field info
 const char* hexDigit MEMMODE="0123456789ABCDEF";//a text table
-const char* hexNr[] MEMMODE={"0","x",hexDigit,hexDigit};//text validators
+char* const hexNr[] MEMMODE = { "0", "x", const_cast<char*>(hexDigit), const_cast<char*>(hexDigit) };
 char buf1[]="0x11";//text edit target
 
 prompt* mainData[]={
